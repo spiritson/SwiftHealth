@@ -1,0 +1,54 @@
+
+Insert_HealthServiceProvider_Details/{FName}/{LName}/{UserName}/{Password}/{HostpitalName}/{Specialization}/{Designation}/{WorkPlace_Address}/{City}/{State}/{Zip}
+
+Insert_PatientDetails/{FName}/{LName}/{UserName}/{Password}/{House_Address}/{City}/{State}/{Zip}
+
+CheckAndRequestDoctor_Details/{UserName}/{Password}
+
+
+Doctorslist:
+
+
+Dr. Geeta Singh
+Cardiologist
+135 North Jackson Avenue
+Suite 203
+San Jose, California 95116
+
+
+Add to DB:
+http://192.168.0.28/TestWcf/Service1.svc/Insert_HealthServiceProvider_Details/Geeta/Singh/gsingh/1234/Kaiser/Cardiology/MD/135 North Jackson Avenue/San Jose/California/95116
+
+
+Login:
+http://192.168.0.28/TestWcf/Service1.svc/CheckAndRequestDoctor_Details/gsingh/1234
+
+Checkin:
+http://192.168.0.28/TestWcf/Service1.svc/CheckInDoctor_Details/1/Geeta/135 North Jackson Avenue San Jose California 95116/Cardiology
+
+
+Dr. Amir Kaykha
+Cardiologist
+200 Jose Figueres
+Suite 365
+San Jose, California 95116
+
+
+http://192.168.0.28/TestWcf/Service1.svc/Insert_HealthServiceProvider_Details/Amir/Kaykha/akaykha/1234/Kaiser/Cardiology/MD/200 Jose Figueres/San Jose/California/95116
+
+
+http://192.168.0.28/TestWcf/Service1.svc/CheckAndRequestDoctor_Details/akaykha/1234
+
+http://192.168.0.28/TestWcf/Service1.svc/CheckInDoctor_Details/2/Amir/200 Jose Figueres San Jose California 95116/Cardiology
+
+Dan V. Dang, M.D
+1143 Story Road
+Suite 260
+San Jose, California 95122
+
+
+http://192.168.0.28/TestWcf/Service1.svc/Insert_HealthServiceProvider_Details/Dang/Dan/dangd/1234/Kaiser/Cardiology/MD/1143 Story Road/San Jose/California/95122
+
+http://192.168.0.28/TestWcf/Service1.svc/CheckAndRequestDoctor_Details/dangd/1234
+
+http://192.168.0.28/TestWcf/Service1.svc/CheckInDoctor_Details/3/Dang/1143 Story Road San Jose California 95116/Cardiology

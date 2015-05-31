@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Swift Health Service</title>
+  <style type="text/css">
+  #duration_in_traffic_Doctor1,#duration_in_traffic_Doctor2,#duration_in_traffic_Doctor3{
+    text-align: center;
+  }
+
+  .Doctor1, .h1{
+    text-align:center;
+
+  }
+
+  .Doctor2, .h1{
+    text-align:center;
+
+  }
+
+  .Doctor3, .h1{
+    text-align:center;
+
+  }
+
+  #duration{
+    color : red;
+    text-align : left;
+
+  }
+
+  #doc_address{
+    display:inline;
+    text-align : left;
+  }
+
+  #teamid,#teamppl{
+
+    text-align : center;
+  }
+
+  </style>
+  <meta content="en" http-equiv="content-language">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <!--link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" /-->
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&sensor=false&language=en"></script>
+  <script src="js/maps.js"></script>
+</head>
+
+<body>
+  <div data-role="page" id="first_page">
+    <div data-role="header">
+      <h1>Swift Health Service</h1>
+    </div>
+
+    <div data-role="content">
+
+      <!--Location :<input type="text" id="location" name="location" disabled-->
+
+
+      <input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" checked/>
+      <label for="checkbox-1">Current Location</label>
+
+      <label for="location">Location :</label>
+      <input type="text" name="name" id="location" value="" disabled/>
+
+
+
+      Patient Name :<input type="text" id="patientname" name="patientname" required>
+
+      <label for="select-custom-20">Select Health Service:</label>
+      <select name="select-custom-20" id="mode" data-native-menu="false">
+        <option value="Cardiology">Cardiology</option>
+        <option value="Urologist">Urologist</option>
+        <option value="Physician">Physician</option>
+      </select>
+
+      <a data-icon="search" data-role="button" href="#" id="gethealth">Get Fastest Health Service</a>
+
+    </div>
+
+
+    <div data-role="main" class="ui-content">
+      <ul data-icon="location" data-role="listview" data-inset="true" data-theme="d" id="doctorlist">
+      </ul>
+    </div>
+
+
+    <div data-role="footer" data-position="fixed">
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#About" data-icon="info" data-transition="slide ">About</a>
+            <li><a href="#first_page" data-icon="search" data-transition="slide ">Search</a>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div data-role="page" id="About">
+        <div data-role="header">
+          <h1>Swift Health Service</h1>
+        </div>
+          <div data-role="content" class="ui-content" id="teamid">
+            <h2>Our Team:</h2>
+          </div>
+
+
+          <div data-role="main" class="ui-content" id="teamppl">
+          <ul data-role="listview" data-icon="false" >
+            <li><a href="#">
+              <img src="img/shiva.jpg">
+              <h2>ShivaTeja Madipalli</h2>
+              <p>AathramPakodi</p></a>
+            </li>
+            <li><a href="#">
+              <img src="img/satish.jpg" >
+              <h2>Satish Palakoti</h2>
+              <p>GYM-Son</p></a>
+            </li>
+            <li><a href="#">
+              <img src="img/mahesh.jpg">
+              <h2>Mahesh Bepet</h2>
+              <p>Gundu Boss</p></a>
+            </li>
+            <li><a href="#">
+              <img src="img/github.jpg">
+              <h2>Gopika Gogineni</h2>
+              <p>No Idea</p></a>
+            </li>
+          </ul>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+          <div data-role="navbar" data-transition="pop">
+            <ul>
+              <li><a href="#About" data-icon="info">About</a>
+              <li><a href="#first_page" data-icon="search" >Search</a>
+                </ul>
+              </div>
+            </div>
+
+      </div>
+
+
+
+          <div data-role="page" id="Doctor1">
+            <div data-role="header">
+              <h1>Swift Health Service</h1>
+            </div>
+
+            <div data-role="content">
+              <div class="ui-bar-a ui-corner-all ui-shadow" style="padding:1em;">
+                <div id="map_canvas_Doctor1" style="height:300px;"></div>
+
+              </div>
+
+              <div>
+                <p id="duration_in_traffic_Doctor1"></p>
+              </div>
+
+              <div id="results_Doctor1" style="display:none;">
+                <div id="directions_Doctor1"></div>
+              </div>
+
+            </div>
+          </div>
+
+          <div data-role="page" id="Doctor2">
+            <div data-role="header">
+              <h1>Swift Health Service</h1>
+            </div>
+
+            <div data-role="content">
+              <div class="ui-bar-a ui-corner-all ui-shadow" style="padding:1em;">
+                <div id="map_canvas_Doctor2" style="height:300px;"></div>
+
+              </div>
+
+              <div>
+                <p id="duration_in_traffic_Doctor2"></p>
+              </div>
+
+              <div id="results_Doctor2" style="display:none;">
+                <div id="directions_Doctor2"></div>
+              </div>
+
+            </div>
+          </div>
+
+
+          <div data-role="page" id="Doctor3">
+            <div data-role="header">
+              <h1>Swift Health Service</h1>
+            </div>
+
+            <div data-role="content"
+            <div class="ui-bar-a ui-corner-all ui-shadow" style="padding:1em;">
+              <div id="map_canvas_Doctor3" style="height:300px;"></div>
+            </div>
+
+            <div>
+              <p id="duration_in_traffic_Doctor3"></p>
+            </div>
+
+            <div id="results_Doctor3" style="display:none;">
+              <div id="directions_Doctor3"></div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+
+      </body>
+
+      </html>
